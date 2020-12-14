@@ -18,6 +18,7 @@ Provides ui helpers for Java Fx code contexts
 
 num | id | Right Click -> Copy Link Address
 ----| -- | -------------
-1 | pasa_cbentley_core_src4 | [Import Link](https://github.com/cpbentley/pasa_cbentley_core_src4)
-2 | pasa_cbentley_core_src5 | [Import Link](https://github.com/cpbentley/pasa_cbentley_core_src5)
-3 | pasa_cbentley_core_j2se | [Import Link](https://github.com/cpbentley/pasa_cbentley_core_j2se)
+1 | java_src4_compat_j2se 	| [Import Link](https://github.com/cpbentley/java_src4_compat_j2se)
+2 | pasa_cbentley_core_src4 | [Import Link](https://github.com/cpbentley/pasa_cbentley_core_src4)
+3 | pasa_cbentley_core_src5 | [Import Link](https://github.com/cpbentley/pasa_cbentley_core_src5)
+4 | pasa_cbentley_core_j2se | [Import Link](https://github.com/cpbentley/pasa_cbentley_core_j2se/tree/master/pasa_cbentley_core_j2se)
