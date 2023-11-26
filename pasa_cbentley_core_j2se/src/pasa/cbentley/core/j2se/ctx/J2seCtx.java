@@ -6,6 +6,17 @@ import pasa.cbentley.core.src4.interfaces.IInputStreamFactory;
 import pasa.cbentley.core.src4.logging.Dctx;
 import pasa.cbentley.core.src5.ctx.C5Ctx;
 
+/**
+ * Base Context class for Swing,SWT, JavaFX core contexts.
+ * 
+ * <p>
+ * All J2SE graphical base modules
+ * </p>
+ * @see {@link InputStreamFactoryJ2se}
+ * 
+ * @author Charles Bentley
+ *
+ */
 public abstract class J2seCtx extends ACtx {
 
    protected final C5Ctx          c5;
@@ -18,12 +29,12 @@ public abstract class J2seCtx extends ACtx {
       isFac = new InputStreamFactoryJ2se(this);
    }
 
-   public IInputStreamFactory getInputStreamFactory() {
-      return isFac;
-   }
-
    public C5Ctx getC5() {
       return c5;
+   }
+
+   public IInputStreamFactory getInputStreamFactory() {
+      return isFac;
    }
 
    //#mdebug
@@ -33,14 +44,14 @@ public abstract class J2seCtx extends ACtx {
       super.toString(dc.sup());
    }
 
-   private void toStringPrivate(Dctx dc) {
-
-   }
-
    public void toString1Line(Dctx dc) {
       dc.root1Line(this, "J2seCtx");
       toStringPrivate(dc);
       super.toString1Line(dc.sup1Line());
+   }
+
+   private void toStringPrivate(Dctx dc) {
+
    }
 
    //#enddebug
