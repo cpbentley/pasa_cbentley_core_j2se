@@ -39,13 +39,13 @@ public abstract class J2seCtx extends ACtx {
 
    //#mdebug
    public void toString(Dctx dc) {
-      dc.root(this, "J2seCtx");
+      dc.root(this, J2seCtx.class, 45);
       toStringPrivate(dc);
       super.toString(dc.sup());
    }
 
    public void toString1Line(Dctx dc) {
-      dc.root1Line(this, "J2seCtx");
+      dc.root1Line(this, J2seCtx.class);
       toStringPrivate(dc);
       super.toString1Line(dc.sup1Line());
    }
