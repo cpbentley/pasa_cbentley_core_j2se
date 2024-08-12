@@ -17,13 +17,13 @@ import pasa.cbentley.core.src5.ctx.C5Ctx;
  * @author Charles Bentley
  *
  */
-public abstract class J2seCtx extends ACtx {
+public abstract class J2seCoreCtx extends ACtx {
 
    protected final C5Ctx          c5;
 
    private InputStreamFactoryJ2se isFac;
 
-   public J2seCtx(C5Ctx c5) {
+   public J2seCoreCtx(C5Ctx c5) {
       super(c5.getUC());
       this.c5 = c5;
       isFac = new InputStreamFactoryJ2se(this);
@@ -39,13 +39,13 @@ public abstract class J2seCtx extends ACtx {
 
    //#mdebug
    public void toString(Dctx dc) {
-      dc.root(this, J2seCtx.class, 45);
+      dc.root(this, J2seCoreCtx.class, 45);
       toStringPrivate(dc);
       super.toString(dc.sup());
    }
 
    public void toString1Line(Dctx dc) {
-      dc.root1Line(this, J2seCtx.class);
+      dc.root1Line(this, J2seCoreCtx.class);
       toStringPrivate(dc);
       super.toString1Line(dc.sup1Line());
    }

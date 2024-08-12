@@ -6,13 +6,26 @@ import javax.swing.SwingUtilities;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
-import pasa.cbentley.core.j2se.ctx.J2seCtx;
+import pasa.cbentley.core.fx.engine.ExecutorFx;
+import pasa.cbentley.core.j2se.ctx.J2seCoreCtx;
+import pasa.cbentley.core.src4.interfaces.IExecutor;
 import pasa.cbentley.core.src5.ctx.C5Ctx;
 
-public class FxCtx extends J2seCtx {
+public class FxCoreCtx extends J2seCoreCtx {
 
-   public FxCtx(C5Ctx c5) {
+   private ExecutorFx executor;
+
+   public FxCoreCtx(C5Ctx c5) {
       super(c5);
+      executor = new ExecutorFx(this);
+   }
+
+   public IExecutor getExecutor() {
+      return executor;
+   }
+
+   public ExecutorFx getExecutorFx() {
+      return executor;
    }
 
    /**
@@ -29,7 +42,7 @@ public class FxCtx extends J2seCtx {
       try {
          latch.await();
          //#debug
-         toDLog().pFlow("JavaFx Platform initialized", this, FxCtx.class, "initializePlatform", LVL_05_FINE, true);
+         toDLog().pFlow("JavaFx Platform initialized", this, FxCoreCtx.class, "initializePlatform", LVL_05_FINE, true);
       } catch (InterruptedException e) {
          e.printStackTrace();
       }
