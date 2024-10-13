@@ -23,8 +23,9 @@ public abstract class J2seCoreCtx extends ACtx {
 
    private InputStreamFactoryJ2se isFac;
 
-   public J2seCoreCtx(C5Ctx c5) {
-      super(c5.getUC());
+   
+   public J2seCoreCtx(IConfigJ2seCore config, C5Ctx c5) {
+      super(config, c5.getUC());
       this.c5 = c5;
       isFac = new InputStreamFactoryJ2se(this);
    }

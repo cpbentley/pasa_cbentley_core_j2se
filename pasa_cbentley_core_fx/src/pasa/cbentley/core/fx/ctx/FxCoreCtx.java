@@ -15,8 +15,8 @@ public class FxCoreCtx extends J2seCoreCtx {
 
    private ExecutorFx executor;
 
-   public FxCoreCtx(C5Ctx c5) {
-      super(c5);
+   public FxCoreCtx(IConfigFxCore config, C5Ctx c5) {
+      super((config == null) ? new ConfigFxCoreDef() : config, c5);
       executor = new ExecutorFx(this);
    }
 
